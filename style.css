@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-size:20px;
+    font-weight: 400;
+    background:linear-gradient(to right,#ffaeaf, #a3a);
+}
+.container{
+    max-width: 400px;
+    margin:auto;
+    text-align:center;
+}
+form input{
+    width:90%;
+    padding:5px 7px;
+    margin:10px;
+}
+h5{
+    margin:0;
+    padding:5px;
+}
+.temp-deg{
+    padding:5px;
+}
