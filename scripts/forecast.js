@@ -21,9 +21,9 @@ const getCity = async (city)=>{
 }
 
 getCity('hargeisa')
- .then(data =>{
+.then(data=>{
     return getWeather(data.Key);
- }).then(data=>console.log(data))
- .catch(err=>console.log(err));
-
+}).then(data=>{
+    console.log(data);
+}).catch(err=>console.log(err));
 
