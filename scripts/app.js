@@ -3,17 +3,23 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 
 const updateUi =(data) =>{
+    // normal way.
+    /*
     const cityDet = data.cityDet;
-    const weather = data.weatherDet;
+    const weatherDet = data.weatherDet;
+    */
+
+    // destucturing way
+   const {cityDet, weatherDet} = data;
 
     details.innerHTML = `
     <div class="detials">
     <h5>${cityDet.EnglishName}</h5>
     <div class="w-status">
-        ${weather.WeatherText}
+        ${weatherDet.WeatherText}
     </div>
     <div class="temp-deg">
-        <span>Temp ${weather.Temperature.Metric.Value}</span>
+        <span>Temp ${weatherDet.Temperature.Metric.Value}</span>
         <span>&deg;C</span>
     </div>
 </div>
