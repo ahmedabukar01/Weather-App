@@ -31,13 +31,16 @@ const updateUi =(data) =>{
     // image day or night
     const iconimg = `img/icons/${weatherDet.WeatherIcon}.svg`;
     icon.setAttribute('src', iconimg);
-    
-    let imgsrc = null;
+
+    let imgsrc = weatherDet.IsDayTime? 'img/day.svg' : 'img/night.svg';
+    /*
     if(weatherDet.IsDayTime){
         imgsrc = 'img/day.svg';
     } else{
         imgsrc = 'img/night.svg';
     }
+    */
+
     time.setAttribute('src', imgsrc);
     
     // if the d-none is present
