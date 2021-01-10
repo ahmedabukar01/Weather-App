@@ -9,7 +9,8 @@ const updateUi =(data) =>{
     const weatherDet = data.weatherDet;
     */
 
-    // destucturing way
+    // destucturing way,
+    
    const {cityDet, weatherDet} = data;
 
     details.innerHTML = `
