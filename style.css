@@ -8,13 +8,30 @@ body{
 }
 .container{
     max-width: 400px;
+    width:80%;
     margin:auto;
     text-align:center;
+}
+.card-info img{
+    width:300px;
 }
 form input{
     width:90%;
     padding:5px 7px;
     margin:10px;
+}
+
+.icon{
+    background:rgb(216, 212, 212);
+    width:80px;
+    position:relative;
+    border-radius: 50%;
+    margin-bottom: -30px;
+    top:-50px;
+}
+.card{
+    display:flex;
+    flex-direction: column;
 }
 h5{
     margin:0;

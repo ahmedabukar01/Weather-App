@@ -1,6 +1,8 @@
 const form = document.querySelector('form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon');
 
 const updateUi =(data) =>{
     // normal way.
@@ -25,7 +27,20 @@ const updateUi =(data) =>{
     </div>
 </div>
     `;
+
+    // image day or night
+    const iconimg = `img/icons/${weatherDet.WeatherIcon}.svg`;
+    icon.setAttribute('src', iconimg);
     
+    let imgsrc = null;
+    if(weatherDet.IsDayTime){
+        imgsrc = 'img/day.svg';
+    } else{
+        imgsrc = 'img/night.svg';
+    }
+    time.setAttribute('src', imgsrc);
+    
+    // if the d-none is present
     if(card.classList.contains('d-none')){
         card.classList.remove('d-none');
     }
