@@ -19,5 +19,11 @@ const getCity = async (city)=>{
 
     return data[0];
 }
-
+getCity('muqdisho')
+.then(data=>{
+    console.log(data)
+    return getWeather(data.Key);
+}).then(data=>{
+    console.log(data);
+});
 
