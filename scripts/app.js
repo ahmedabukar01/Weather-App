@@ -8,6 +8,7 @@ form.addEventListener('submit', e=>{
     e.preventDefault();
     const city = form.city.value.trim();
     form.reset();
+    
     updateUi(city);
 
 });
