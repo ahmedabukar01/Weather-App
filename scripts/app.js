@@ -49,13 +49,7 @@ const updateUi =(data) =>{
     }
 }
 let gettingThings = async (city) =>{
-    const cityDet = await getCity(city);
-    const weatherDet = await getWeather(cityDet.Key);
-
-    return {
-        cityDet,
-        weatherDet
-    }
+   
 }
 form.addEventListener('submit', e=>{
     e.preventDefault();
