@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon');
+const forecast = new Forecast();
 
 const updateUi =(data) =>{
     // normal way.
@@ -48,17 +49,21 @@ const updateUi =(data) =>{
         card.classList.remove('d-none');
     }
 }
-let gettingThings = async (city) =>{
-   
-}
+
 form.addEventListener('submit', e=>{
     e.preventDefault();
     const city = form.city.value.trim();
     form.reset();
     
+    localStorage.city = city;
     // getting data
-    gettingThings(city)
+    forecast.gettingThings(city)
     .then(data => updateUi(data))
     .catch(err => console.log(err));
 
 });
+if(localStorage.city){
+    forecast.gettingThings(localStorage.city)
+    .then(data=>updateUi(data))
+    .catch(err=>console.log(err));
+}
